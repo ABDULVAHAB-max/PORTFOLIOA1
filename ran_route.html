@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rann &amp; Route Travels — Ahmedabad | Worldwide Tour Packages</title>
+<meta name="description" content="Ahmedabad-based travel agency offering worldwide and domestic tour packages, visa assistance, flight &amp; hotel booking, honeymoon packages and corporate travel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B2A4A;
+    --ink-soft:#3C4A6B;
+    --paper:#F1EDE3;
+    --paper-card:#FBF8F1;
+    --rust:#B8562E;
+    --gold:#D9A441;
+    --green:#2F6B4F;
+    --line: rgba(27,42,74,0.14);
+    --shadow: 0 20px 40px -20px rgba(27,42,74,0.35);
+    --radius: 4px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:600;line-height:1.08;letter-spacing:-0.01em;}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--rust);
+    font-weight:600;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 28px;
+    font-family:'Inter',sans-serif;font-weight:600;font-size:0.92rem;
+    border-radius:2px;
+    border:1.5px solid var(--ink);
+    cursor:pointer;
+    transition:all .25s ease;
+    white-space:nowrap;
+  }
+  .btn-solid{background:var(--ink);color:var(--paper-card);}
+  .btn-solid:hover{background:var(--rust);border-color:var(--rust);}
+  .btn-ghost{background:transparent;color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper-card);}
+  .btn-sm{padding:10px 18px;font-size:0.82rem;}
+
+  /* ===== Top utility strip ===== */
+  .topbar{
+    background:var(--ink);
+    color:rgba(241,237,227,0.85);
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.04em;
+  }
+  .topbar .wrap{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:8px 32px;
+    flex-wrap:wrap;gap:6px;
+  }
+  .topbar a:hover{color:var(--gold);}
+  .topbar-left{display:flex;gap:22px;flex-wrap:wrap;}
+
+  /* ===== Header ===== */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(241,237,227,0.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 32px;
+  }
+  .logo{
+    display:flex;flex-direction:column;line-height:1;
+  }
+  .logo .name{font-family:'Fraunces',serif;font-weight:700;font-size:1.5rem;letter-spacing:-0.01em;}
+  .logo .tag{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.16em;color:var(--rust);text-transform:uppercase;margin-top:4px;}
+  .nav-links{
+    display:flex;align-items:center;gap:2px;
+  }
+  .nav-links > li{position:relative;}
+  .nav-links > li > a{
+    display:block;padding:10px 16px;font-weight:600;font-size:0.9rem;
+    border-radius:2px;
+  }
+  .nav-links > li > a:hover{color:var(--rust);}
+  .has-dropdown > a::after{content:" ▾";font-size:0.7em;color:var(--ink-soft);}
+  .dropdown{
+    position:absolute;top:100%;left:0;
+    background:var(--paper-card);
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+    min-width:280px;
+    padding:10px;
+    opacity:0;visibility:hidden;transform:translateY(6px);
+    transition:all .2s ease;
+  }
+  .has-dropdown:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0);}
+  .dropdown a{
+    display:flex;justify-content:space-between;gap:10px;
+    padding:11px 14px;border-radius:2px;font-size:0.86rem;font-weight:500;
+  }
+  .dropdown a:hover{background:var(--paper);color:var(--rust);}
+  .dropdown a span.code{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--ink-soft);}
+  .nav-cta{display:flex;align-items:center;gap:14px;}
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+  .burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.25s;}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    padding:76px 0 90px;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;
+  }
+  .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:22px;}
+  .hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--green);}
+  .hero h1{
+    font-size:clamp(2.4rem, 4.4vw, 4rem);
+    margin-bottom:22px;
+  }
+  .hero h1 em{
+    font-style:italic;color:var(--rust);
+  }
+  .hero p.lead{
+    font-size:1.08rem;color:var(--ink-soft);max-width:480px;margin-bottom:34px;
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px;}
+  .hero-stats{display:flex;gap:36px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px;}
+  .hero-stats .stat b{font-family:'Fraunces',serif;font-size:1.7rem;display:block;}
+  .hero-stats .stat span{font-size:0.78rem;color:var(--ink-soft);}
+
+  /* boarding pass visual */
+  .pass{
+    background:var(--paper-card);
+    border:1.5px solid var(--ink);
+    border-radius:6px;
+    box-shadow:var(--shadow);
+    position:relative;
+    transform:rotate(2deg);
+  }
+  .pass-top{
+    display:flex;justify-content:space-between;align-items:flex-start;
+    padding:22px 24px 18px;
+  }
+  .pass-top .airline{font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.14em;color:var(--rust);font-weight:600;}
+  .pass-top .cls{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--ink-soft);text-align:right;}
+  .pass-route{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:6px 24px 20px;
+  }
+  .pass-route .city{text-align:left;}
+  .pass-route .city b{font-family:'Fraunces',serif;font-size:2rem;display:block;}
+  .pass-route .city span{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--ink-soft);}
+  .pass-route .plane{color:var(--gold);font-size:1.3rem;}
+  .pass-dash{border-top:1.5px dashed var(--line);position:relative;margin:0 -1.5px;}
+  .pass-dash::before,.pass-dash::after{
+    content:"";position:absolute;top:-9px;width:18px;height:18px;background:var(--paper);border-radius:50%;
+  }
+  .pass-dash::before{left:-9px;}
+  .pass-dash::after{right:-9px;}
+  .pass-details{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+    padding:20px 24px;font-family:'JetBrains Mono',monospace;
+  }
+  .pass-details div span{display:block;font-size:0.6rem;color:var(--ink-soft);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;}
+  .pass-details div b{font-size:0.82rem;}
+  .pass-barcode{
+    height:34px;
+    margin:0 24px 22px;
+    background:repeating-linear-gradient(90deg, var(--ink) 0 2px, transparent 2px 5px, var(--ink) 5px 6px, transparent 6px 10px);
+    opacity:0.85;
+  }
+  .stamp{
+    position:absolute;
+    width:88px;height:88px;
+    border:2px solid var(--green);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--green);
+    transform:rotate(-16deg);
+    background:rgba(241,237,227,0.9);
+  }
+  .stamp.s1{top:-30px;right:-24px;}
+  .stamp.s2{bottom:-26px;left:-30px;border-color:var(--rust);color:var(--rust);transform:rotate(10deg);}
+
+  /* ===== Section basics ===== */
+  section{padding:96px 0;}
+  .sec-head{max-width:640px;margin-bottom:56px;}
+  .sec-head .eyebrow{margin-bottom:14px;display:block;}
+  .sec-head h2{font-size:clamp(1.9rem,3vw,2.6rem);}
+  .sec-head p{color:var(--ink-soft);margin-top:14px;font-size:1.02rem;}
+
+  /* ===== Departure board (services) ===== */
+  .board-section{background:var(--ink);color:var(--paper);}
+  .board-section .eyebrow{color:var(--gold);}
+  .board-section .sec-head p{color:rgba(241,237,227,0.72);}
+  .board{
+    border-top:1px solid rgba(241,237,227,0.2);
+  }
+  .board-row{
+    display:grid;
+    grid-template-columns:110px 1.6fr 1.4fr 140px;
+    gap:20px;align-items:center;
+    padding:20px 6px;
+    border-bottom:1px solid rgba(241,237,227,0.16);
+    transition:background .2s ease;
+  }
+  .board-row:hover{background:rgba(255,255,255,0.04);}
+  .board-row .code{font-family:'JetBrains Mono',monospace;color:var(--gold);font-weight:600;font-size:0.92rem;}
+  .board-row .service h4{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--paper-card);}
+  .board-row .desc{font-size:0.86rem;color:rgba(241,237,227,0.65);}
+  .board-row .status{
+    font-family:'JetBrains Mono',monospace;font-size:0.72rem;letter-spacing:0.06em;
+    color:var(--green);
+    display:flex;align-items:center;gap:8px;justify-content:flex-end;
+  }
+  .board-row .status .d{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);}
+  .board-head{
+    display:grid;grid-template-columns:110px 1.6fr 1.4fr 140px;gap:20px;
+    padding:0 6px 14px;
+    font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;
+    color:rgba(241,237,227,0.5);
+  }
+
+  /* ===== Destinations ===== */
+  .dest-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  }
+  .dest-card{
+    background:var(--paper-card);
+    border:1px solid var(--line);
+    padding:26px 22px;
+    border-radius:4px;
+    position:relative;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .dest-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);}
+  .dest-card .badge{
+    width:46px;height:46px;border-radius:50%;
+    border:1.5px dashed var(--rust);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'JetBrains Mono',monospace;font-size:0.62rem;font-weight:600;color:var(--rust);
+    margin-bottom:18px;
+  }
+  .dest-card h4{font-size:1.15rem;margin-bottom:8px;}
+  .dest-card p{font-size:0.84rem;color:var(--ink-soft);margin-bottom:16px;}
+  .dest-card .price{font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--ink);border-top:1px solid var(--line);padding-top:14px;display:flex;justify-content:space-between;}
+  .dest-card .price b{color:var(--rust);}
+
+  /* ===== Why us ===== */
+  .why-wrap{display:grid;grid-template-columns:0.9fr 1.1fr;gap:70px;align-items:start;}
+  .why-list{display:flex;flex-direction:column;}
+  .why-item{
+    display:grid;grid-template-columns:64px 1fr;gap:20px;
+    padding:26px 0;border-bottom:1px solid var(--line);
+  }
+  .why-item:first-child{padding-top:0;}
+  .why-item .num{font-family:'JetBrains Mono',monospace;color:var(--rust);font-size:0.85rem;padding-top:4px;}
+  .why-item h4{font-size:1.08rem;margin-bottom:6px;}
+  .why-item p{color:var(--ink-soft);font-size:0.92rem;}
+  .why-img{
+    background:var(--paper-card);border:1px solid var(--line);border-radius:4px;
+    padding:34px;height:100%;
+  }
+  .why-img .quote-mark{font-family:'Fraunces',serif;font-size:3.4rem;color:var(--gold);line-height:0.6;}
+  .why-img blockquote{font-family:'Fraunces',serif;font-size:1.35rem;font-style:italic;margin:18px 0 20px;line-height:1.4;}
+  .why-img .who{font-family:'JetBrains Mono',monospace;font-size:0.74rem;color:var(--ink-soft);}
+
+  /* ===== Packages (boarding pass cards) ===== */
+  .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .pkg-card{
+    background:var(--paper-card);
+    border:1.5px solid var(--ink);
+    border-radius:6px;
+    overflow:hidden;
+    display:flex;flex-direction:column;
+  }
+  .pkg-head{padding:22px 24px 16px;position:relative;}
+  .pkg-head .eyebrow{color:var(--green);}
+  .pkg-head h3{font-size:1.4rem;margin-top:8px;}
+  .pkg-head .days{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--ink-soft);margin-top:6px;}
+  .pkg-perforation{border-top:1.5px dashed var(--line);}
+  .pkg-list{padding:18px 24px;flex:1;}
+  .pkg-list li{
+    font-size:0.88rem;color:var(--ink-soft);padding:7px 0;
+    display:flex;gap:10px;
+  }
+  .pkg-list li::before{content:"✦";color:var(--gold);font-size:0.7rem;margin-top:3px;}
+  .pkg-price{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 24px;border-top:1px solid var(--line);
+  }
+  .pkg-price b{font-family:'Fraunces',serif;font-size:1.5rem;}
+  .pkg-price span{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--ink-soft);}
+  .pkg-card.featured{border-color:var(--rust);box-shadow:var(--shadow);position:relative;}
+  .pkg-card.featured .pkg-head::after{
+    content:"MOST BOOKED";
+    position:absolute;top:20px;right:-34px;
+    background:var(--rust);color:var(--paper-card);
+    font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;
+    padding:4px 40px;transform:rotate(38deg);
+  }
+
+  /* ===== Testimonials ===== */
+  .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .test-card{background:var(--paper-card);border:1px solid var(--line);padding:28px 26px;border-radius:4px;}
+  .test-card p{font-size:0.94rem;color:var(--ink-soft);margin-bottom:20px;}
+  .test-who{display:flex;align-items:center;gap:12px;}
+  .test-avatar{
+    width:38px;height:38px;border-radius:50%;
+    background:var(--ink);color:var(--paper);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;font-weight:600;font-size:0.9rem;
+  }
+  .test-who .n{font-weight:700;font-size:0.88rem;}
+  .test-who .t{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--ink-soft);}
+
+  /* ===== Contact ===== */
+  .contact-section{background:var(--ink);color:var(--paper);}
+  .contact-section .eyebrow{color:var(--gold);}
+  .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;}
+  .contact-info h2{font-size:clamp(1.9rem,3vw,2.6rem);margin-bottom:18px;}
+  .contact-info p.lead{color:rgba(241,237,227,0.72);margin-bottom:36px;max-width:440px;}
+  .info-row{display:flex;gap:16px;padding:18px 0;border-top:1px solid rgba(241,237,227,0.16);}
+  .info-row:last-of-type{border-bottom:1px solid rgba(241,237,227,0.16);}
+  .info-row .lbl{font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);width:110px;flex-shrink:0;padding-top:2px;}
+  .info-row .val{font-size:0.94rem;color:rgba(241,237,227,0.9);}
+  form.cform{background:var(--paper-card);color:var(--ink);border-radius:4px;padding:34px;}
+  .cform label{display:block;font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px;}
+  .cform .field{margin-bottom:18px;}
+  .cform input, .cform select, .cform textarea{
+    width:100%;border:1px solid var(--line);background:var(--paper);
+    padding:12px 14px;font-family:'Inter',sans-serif;font-size:0.92rem;border-radius:2px;color:var(--ink);
+  }
+  .cform input:focus, .cform select:focus, .cform textarea:focus{outline:2px solid var(--rust);outline-offset:1px;}
+  .cform textarea{resize:vertical;min-height:90px;}
+  .cform .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .cform button{width:100%;justify-content:center;margin-top:6px;}
+
+  /* ===== Footer ===== */
+  footer{padding:56px 0 30px;}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid var(--line);}
+  .foot-logo .name{font-family:'Fraunces',serif;font-weight:700;font-size:1.3rem;}
+  .foot-logo p{font-size:0.86rem;color:var(--ink-soft);margin-top:14px;max-width:260px;}
+  .foot-col h5{font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--rust);margin-bottom:16px;}
+  .foot-col li{padding:6px 0;font-size:0.88rem;color:var(--ink-soft);}
+  .foot-col li a:hover{color:var(--rust);}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;flex-wrap:wrap;gap:10px;}
+  .foot-bottom p{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--ink-soft);}
+  .foot-social{display:flex;gap:16px;}
+  .foot-social a{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--ink-soft);border-bottom:1px solid transparent;}
+  .foot-social a:hover{color:var(--rust);border-color:var(--rust);}
+
+  /* ===== Responsive ===== */
+  @media (max-width: 980px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .pass{transform:rotate(0);margin-top:20px;}
+    .dest-grid{grid-template-columns:repeat(2,1fr);}
+    .why-wrap{grid-template-columns:1fr;}
+    .pkg-grid{grid-template-columns:1fr;}
+    .test-grid{grid-template-columns:1fr;}
+    .contact-wrap{grid-template-columns:1fr;}
+    .foot-top{grid-template-columns:1fr 1fr;}
+    .board-row{grid-template-columns:70px 1fr;grid-template-areas:"code service" ". desc" ". status";row-gap:6px;}
+    .board-row .code{grid-area:code;}
+    .board-row .service{grid-area:service;}
+    .board-row .desc{grid-area:desc;}
+    .board-row .status{grid-area:status;justify-content:flex-start;}
+    .board-head{display:none;}
+  }
+  @media (max-width: 760px){
+    .nav-links{
+      position:fixed;top:64px;left:0;right:0;bottom:0;
+      background:var(--paper);
+      flex-direction:column;align-items:stretch;
+      padding:20px 24px;gap:0;
+      transform:translateX(100%);
+      transition:transform .3s ease;
+      overflow-y:auto;
+    }
+    .nav-links.open{transform:translateX(0);}
+    .nav-links > li > a{padding:16px 4px;border-bottom:1px solid var(--line);}
+    .dropdown{position:static;box-shadow:none;opacity:1;visibility:visible;transform:none;display:none;border:none;padding:0 0 0 14px;}
+    .has-dropdown.open .dropdown{display:block;}
+    .burger{display:block;}
+    .nav-cta .btn-ghost{display:none;}
+    .foot-top{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-left">
+      <span>AMD OFFICE · C.G. ROAD, AHMEDABAD</span>
+      <span>MON–SAT · 10:00–19:30 IST</span>
+    </div>
+    <div class="topbar-right">
+      <a href="tel:+919825000000">+91 98250 00000</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <nav class="nav">
+    <a href="#top" class="logo">
+      <span class="name">Rann &amp; Route</span>
+      <span class="tag">Travels · Ahmedabad</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li class="has-dropdown">
+        <a href="#services" id="servicesToggle">Services</a>
+        <div class="dropdown">
+          <a href="#services"><span>International Tour Packages</span><span class="code">INT</span></a>
+          <a href="#services"><span>Domestic Tour Packages</span><span class="code">DOM</span></a>
+          <a href="#services"><span>Visa Assistance</span><span class="code">VSA</span></a>
+          <a href="#services"><span>Flight Booking</span><span class="code">FLT</span></a>
+          <a href="#services"><span>Hotel &amp; Resort Booking</span><span class="code">HTL</span></a>
+          <a href="#services"><span>Honeymoon Packages</span><span class="code">HNY</span></a>
+          <a href="#services"><span>Corporate &amp; MICE Travel</span><span class="code">CRP</span></a>
+          <a href="#services"><span>Group &amp; Custom Tours</span><span class="code">GRP</span></a>
+          <a href="#services"><span>Forex &amp; Travel Insurance</span><span class="code">FEX</span></a>
+        </div>
+      </li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-ghost btn-sm">Get a Quote</a>
+      <a href="tel:+919825000000" class="btn btn-solid btn-sm">Call Now</a>
+      <button class="burger" id="burgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          <span class="eyebrow">Based in Ahmedabad · Serving Travellers Worldwide</span>
+        </div>
+        <h1>Your journey begins on <em>C.G. Road</em>, and ends anywhere on earth.</h1>
+        <p class="lead">Rann &amp; Route plans and books international and domestic tours end-to-end — flights, visas, stays and itineraries — for travellers across Gujarat, handled by a team that answers the phone.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-solid">Plan My Trip</a>
+          <a href="#packages" class="btn btn-ghost">View Packages</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>18+</b><span>Years in Ahmedabad</span></div>
+          <div class="stat"><b>65+</b><span>Countries Covered</span></div>
+          <div class="stat"><b>12,400+</b><span>Travellers Sent Off</span></div>
+          <div class="stat"><b>4.8/5</b><span>Average Rating</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="pass">
+          <div class="stamp s1">Visa<br>Cleared</div>
+          <div class="pass-top">
+            <span class="airline">RANN &amp; ROUTE · BOARDING PASS</span>
+            <span class="cls">CLASS<br><b style="color:var(--ink)">EXPLORER</b></span>
+          </div>
+          <div class="pass-route">
+            <div class="city"><b>AMD</b><span>AHMEDABAD</span></div>
+            <div class="plane">✈</div>
+            <div class="city" style="text-align:right"><b>ANY</b><span>ANYWHERE, WORLD</span></div>
+          </div>
+          <div class="pass-dash"></div>
+          <div class="pass-details">
+            <div><span>Passenger</span><b>You + Family</b></div>
+            <div><span>Departs</span><b>Ahmedabad</b></div>
+            <div><span>Trip Type</span><b>Round Trip</b></div>
+            <div><span>Status</span><b style="color:var(--green)">Confirmed</b></div>
+          </div>
+          <div class="pass-barcode"></div>
+          <div class="stamp s2">Est.<br>2007</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES / DEPARTURE BOARD -->
+  <section class="board-section" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What We Handle</span>
+        <h2>Every service on one board.</h2>
+        <p>From the first booking to the last stamp on your passport — here's everything we take off your plate, listed like a departure board because with us, it's all confirmed and on time.</p>
+      </div>
+
+      <div class="board">
+        <div class="board-head">
+          <span>Code</span><span>Service</span><span>Details</span><span style="text-align:right">Status</span>
+        </div>
+
+        <div class="board-row">
+          <span class="code">INT-01</span>
+          <div class="service"><h4>International Tour Packages</h4></div>
+          <span class="desc">Europe, Southeast Asia, UAE, USA, Australia &amp; more — fixed departures or custom.</span>
+          <span class="status"><span class="d"></span>Available</span>
+        </div>
+        <div class="board-row">
+          <span class="code">DOM-02</span>
+          <div class="service"><h4>Domestic Tour Packages</h4></div>
+          <span class="desc">Kashmir, Rajasthan, Kerala, Northeast, Andaman and all-India circuits.</span>
+          <span class="status"><span class="d"></span>Available</span>
+        </div>
+        <div class="board-row">
+          <span class="code">VSA-03</span>
+          <div class="service"><h4>Visa Assistance</h4></div>
+          <span class="desc">Documentation, appointments and tracking for tourist, business &amp; Schengen visas.</span>
+          <span class="status"><span class="d"></span>Available</span>
+        </div>
+        <div class="board-row">
+          <span class="code">FLT-04</span>
+          <div class="service"><h4>Flight Booking</h4></div>
+          <span class="desc">Domestic &amp; international air tickets at agency rates, with 24×7 support.</span>
+          <span class="status"><span class="d"></span>Available</span>
+        </div>
+        <div class="board-row">
+          <span class="code">HTL-05</span>
+          <div class="service"><h4>Hotel &amp; Resort Booking</h4></div>
+          <span class="desc">Verified stays across budgets, from boutique hotels to 5-star resorts.</span>
+          <span class="status"><span class="d"></span>Available</span>
+        </div>
+        <div class="board-row">
+          <span class="code">HNY-06</span>
+          <div class="service"><h4>Honeymoon Packages</h4></div>
+          <span class="desc">Curated romantic itineraries for Maldives, Bali, Switzerland, Thailand &amp; more.</span>
+          <span class="status"><span class="d"></span>Available</span>
+        </div>
+        <div class="board-row">
+          <span class="code">CRP-07</span>
+          <div class="service"><h4>Corporate &amp; MICE Travel</h4></div>
+          <span class="desc">Business trips, conferences, incentive tours and offsites for Ahmedabad companies.</span>
+          <span class="status"><span class="d"></span>Available</span>
+        </div>
+        <div class="board-row">
+          <span class="code">GRP-08</span>
+          <div class="service"><h4>Group &amp; Custom Tours</h4></div>
+          <span class="desc">Family functions, school trips, religious yatras and fully tailor-made itineraries.</span>
+          <span class="status"><span class="d"></span>Available</span>
+        </div>
+        <div class="board-row">
+          <span class="code">FEX-09</span>
+          <div class="service"><h4>Forex &amp; Travel Insurance</h4></div>
+          <span class="desc">Currency exchange and travel insurance arranged before you leave Ahmedabad.</span>
+          <span class="status"><span class="d"></span>Available</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section id="destinations">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Popular Right Now</span>
+        <h2>Where Ahmedabad is flying this season.</h2>
+        <p>A mix of international favourites and homegrown Indian gems, each planned door-to-door by our team.</p>
+      </div>
+      <div class="dest-grid">
+        <div class="dest-card">
+          <div class="badge">EUR</div>
+          <h4>Switzerland &amp; Europe</h4>
+          <p>7–12 night multi-country circuits with Alps, lakes and old towns.</p>
+          <div class="price"><span>Starts from</span><b>₹1,45,000</b></div>
+        </div>
+        <div class="dest-card">
+          <div class="badge">DXB</div>
+          <h4>Dubai &amp; Abu Dhabi</h4>
+          <p>Desert safaris, skyline views and family-friendly resorts.</p>
+          <div class="price"><span>Starts from</span><b>₹42,000</b></div>
+        </div>
+        <div class="dest-card">
+          <div class="badge">BKK</div>
+          <h4>Thailand</h4>
+          <p>Bangkok, Pattaya and Phuket — beaches, islands and nightlife.</p>
+          <div class="price"><span>Starts from</span><b>₹38,000</b></div>
+        </div>
+        <div class="dest-card">
+          <div class="badge">MLE</div>
+          <h4>Maldives</h4>
+          <p>Overwater villas and private beaches — our top honeymoon pick.</p>
+          <div class="price"><span>Starts from</span><b>₹78,000</b></div>
+        </div>
+        <div class="dest-card">
+          <div class="badge">SNG</div>
+          <h4>Singapore &amp; Bali</h4>
+          <p>City sights paired with island calm — a favourite for families.</p>
+          <div class="price"><span>Starts from</span><b>₹65,000</b></div>
+        </div>
+        <div class="dest-card">
+          <div class="badge">SRI</div>
+          <h4>Sri Lanka</h4>
+          <p>Short-haul escape with hill country, coast and wildlife.</p>
+          <div class="price"><span>Starts from</span><b>₹35,000</b></div>
+        </div>
+        <div class="dest-card">
+          <div class="badge">KSH</div>
+          <h4>Kashmir</h4>
+          <p>Srinagar, Gulmarg and Pahalgam — India's most-booked domestic trip.</p>
+          <div class="price"><span>Starts from</span><b>₹28,000</b></div>
+        </div>
+        <div class="dest-card">
+          <div class="badge">RAJ</div>
+          <h4>Rajasthan</h4>
+          <p>Forts, palaces and desert camps across Jaipur, Udaipur and Jaisalmer.</p>
+          <div class="price"><span>Starts from</span><b>₹24,000</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-section" id="why" style="background:var(--paper-card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Why Travellers Choose Us</span>
+        <h2>An Ahmedabad office, a worldwide network.</h2>
+      </div>
+      <div class="why-wrap">
+        <div class="why-list">
+          <div class="why-item">
+            <span class="num">01</span>
+            <div><h4>Local office, real people</h4><p>Walk into our C.G. Road office any weekday — no call centres, no chatbots deciding your itinerary.</p></div>
+          </div>
+          <div class="why-item">
+            <span class="num">02</span>
+            <div><h4>End-to-end handling</h4><p>Flights, visas, hotels, forex and insurance arranged together, so nothing falls between two bookings.</p></div>
+          </div>
+          <div class="why-item">
+            <span class="num">03</span>
+            <div><h4>Transparent, fixed pricing</h4><p>Every quote is itemised. What you're shown is what you pay — no last-minute add-ons.</p></div>
+          </div>
+          <div class="why-item">
+            <span class="num">04</span>
+            <div><h4>Support while you travel</h4><p>A dedicated number stays reachable for the length of your trip, wherever in the world you are.</p></div>
+          </div>
+        </div>
+        <div class="why-img">
+          <span class="quote-mark">"</span>
+          <blockquote>They planned our entire Europe trip from Ahmedabad — visas, hotels, even a SIM card waiting at the airport. Nothing to think about once we landed.</blockquote>
+          <div class="who">— Bhavesh &amp; Priya Shah, Bopal, Ahmedabad</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section id="packages">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Fixed Departures</span>
+        <h2>Ready-made itineraries, boarding-pass simple.</h2>
+        <p>Join a scheduled group departure or use these as a starting point for a custom plan.</p>
+      </div>
+      <div class="pkg-grid">
+        <div class="pkg-card">
+          <div class="pkg-head">
+            <span class="eyebrow">Domestic · 6D/5N</span>
+            <h3>Kashmir in Full Bloom</h3>
+            <span class="days">Srinagar · Gulmarg · Pahalgam · Sonmarg</span>
+          </div>
+          <div class="pkg-perforation"></div>
+          <ul class="pkg-list">
+            <li>Return flights from Ahmedabad</li>
+            <li>4-star houseboat &amp; hotel stays</li>
+            <li>Private cab for all transfers</li>
+            <li>Daily breakfast &amp; dinner</li>
+          </ul>
+          <div class="pkg-price"><b>₹28,999</b><span>per person, twin sharing</span></div>
+        </div>
+
+        <div class="pkg-card featured">
+          <div class="pkg-head">
+            <span class="eyebrow">International · 8D/7N</span>
+            <h3>Switzerland Explorer</h3>
+            <span class="days">Zurich · Lucerne · Interlaken · Zermatt</span>
+          </div>
+          <div class="pkg-perforation"></div>
+          <ul class="pkg-list">
+            <li>Return international flights</li>
+            <li>Schengen visa assistance included</li>
+            <li>Swiss Travel Pass for all transit</li>
+            <li>4-star centrally located hotels</li>
+          </ul>
+          <div class="pkg-price"><b>₹1,54,999</b><span>per person, twin sharing</span></div>
+        </div>
+
+        <div class="pkg-card">
+          <div class="pkg-head">
+            <span class="eyebrow">Honeymoon · 5D/4N</span>
+            <h3>Maldives Overwater</h3>
+            <span class="days">Private island resort, all-inclusive</span>
+          </div>
+          <div class="pkg-perforation"></div>
+          <ul class="pkg-list">
+            <li>Return flights &amp; seaplane transfers</li>
+            <li>Overwater villa with breakfast</li>
+            <li>Complimentary romantic dinner</li>
+            <li>Snorkelling excursion included</li>
+          </ul>
+          <div class="pkg-price"><b>₹82,999</b><span>per person, twin sharing</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" style="background:var(--paper-card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">From Our Travellers</span>
+        <h2>What Ahmedabad says after landing back.</h2>
+      </div>
+      <div class="test-grid">
+        <div class="test-card">
+          <p>"Booked our Dubai trip in one evening visit to their office. Visa, hotel, everything sorted within a week."</p>
+          <div class="test-who">
+            <div class="test-avatar">K</div>
+            <div><div class="n">Kalpesh Patel</div><div class="t">Naranpura, Ahmedabad</div></div>
+          </div>
+        </div>
+        <div class="test-card">
+          <p>"Our Kashmir houseboat stay and every cab transfer was exactly as promised. No surprises on the trip."</p>
+          <div class="test-who">
+            <div class="test-avatar">R</div>
+            <div><div class="n">Riddhi Mehta</div><div class="t">Satellite, Ahmedabad</div></div>
+          </div>
+        </div>
+        <div class="test-card">
+          <p>"They handled visas for our 14-person office offsite to Thailand without a single delay. Very organised team."</p>
+          <div class="test-who">
+            <div class="test-avatar">A</div>
+            <div><div class="n">Amit Shah</div><div class="t">HR Head, Prahlad Nagar</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="wrap contact-wrap">
+      <div class="contact-info">
+        <span class="eyebrow">Let's Plan Your Trip</span>
+        <h2>Talk to us before you book anywhere else.</h2>
+        <p class="lead">Share a few details and our Ahmedabad team will call you back with a itinerary and quote — usually within a few hours.</p>
+
+        <div class="info-row"><span class="lbl">Office</span><span class="val">3rd Floor, Sundaram Complex, C.G. Road, Navrangpura, Ahmedabad, Gujarat – 380009</span></div>
+        <div class="info-row"><span class="lbl">Phone</span><span class="val">+91 98250 00000 · +91 79 4000 1234</span></div>
+        <div class="info-row"><span class="lbl">Email</span><span class="val">hello@rannandroute.in</span></div>
+        <div class="info-row"><span class="lbl">Hours</span><span class="val">Monday – Saturday, 10:00 AM – 7:30 PM</span></div>
+      </div>
+
+      <form class="cform" onsubmit="event.preventDefault(); this.querySelector('.confirm').style.display='block';">
+        <div class="field">
+          <label for="fname">Full Name</label>
+          <input id="fname" type="text" placeholder="Your name" required>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="fphone">Phone</label>
+            <input id="fphone" type="tel" placeholder="+91" required>
+          </div>
+          <div class="field">
+            <label for="femail">Email</label>
+            <input id="femail" type="email" placeholder="you@email.com">
+          </div>
+        </div>
+        <div class="field">
+          <label for="fdest">Interested Destination</label>
+          <select id="fdest">
+            <option>International Tour</option>
+            <option>Domestic Tour</option>
+            <option>Honeymoon Package</option>
+            <option>Corporate / Group Travel</option>
+            <option>Just Exploring Options</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fmsg">Trip Details</label>
+          <textarea id="fmsg" placeholder="Travel dates, number of people, budget..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-solid">Request a Callback</button>
+        <p class="confirm" style="display:none;margin-top:14px;font-size:0.85rem;color:var(--green);font-family:'JetBrains Mono',monospace;">✓ Received — our team will call you shortly.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-logo">
+        <div class="name">Rann &amp; Route Travels</div>
+        <p>An Ahmedabad-based travel agency planning international and domestic tours for travellers across Gujarat since 2007.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">International Tours</a></li>
+          <li><a href="#services">Domestic Tours</a></li>
+          <li><a href="#services">Visa Assistance</a></li>
+          <li><a href="#services">Flight Booking</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Reach Us</h5>
+        <ul>
+          <li>C.G. Road, Ahmedabad</li>
+          <li>+91 98250 00000</li>
+          <li>hello@rannandroute.in</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Rann &amp; Route Travels, Ahmedabad. All rights reserved.</p>
+      <div class="foot-social">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById('burgerBtn');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+  const servicesToggle = document.getElementById('servicesToggle');
+  servicesToggle.addEventListener('click', (e) => {
+    if(window.innerWidth <= 760){
+      e.preventDefault();
+      servicesToggle.parentElement.classList.toggle('open');
+    }
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(a=>{
+    a.addEventListener('click', ()=> {
+      if(window.innerWidth <= 760 && a.id !== 'servicesToggle'){
+        navLinks.classList.remove('open');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

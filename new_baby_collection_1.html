@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Baby & General Collection</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blush: #FDE8EF;
+    --blush-mid: #F7B8CC;
+    --rose: #E07097;
+    --rose-deep: #C24E78;
+    --mint: #E2F5F0;
+    --mint-mid: #A4D9CC;
+    --teal: #3AAFA9;
+    --cream: #FBF7F4;
+    --warm-gray: #6B6060;
+    --dark: #2B1F2A;
+    --white: #ffffff;
+    --text-body: #4A3F4A;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--text-body);
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(251,247,244,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--blush-mid);
+    padding: 0 2rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--rose-deep);
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+    line-height: 1.2;
+  }
+
+  .nav-logo span {
+    display: block;
+    font-size: 0.65rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-body);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--rose); }
+
+  .nav-cta {
+    background: var(--rose);
+    color: white !important;
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--rose-deep) !important; color: white !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    padding-top: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  .hero-text {
+    padding: 5rem 4rem 5rem 5rem;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--blush);
+    color: var(--rose-deep);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--rose);
+    border-radius: 50%;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    line-height: 1.12;
+    color: var(--dark);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+  }
+
+  h1 em {
+    color: var(--rose);
+    font-style: italic;
+  }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    color: var(--warm-gray);
+    max-width: 420px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    line-height: 1.75;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--rose);
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: 100px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background: var(--rose-deep);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: var(--dark);
+    padding: 0.85rem 2rem;
+    border-radius: 100px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1.5px solid rgba(43,31,42,0.18);
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--rose);
+    background: var(--blush);
+    color: var(--rose-deep);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--blush-mid);
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    color: var(--rose-deep);
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+    color: var(--warm-gray);
+    margin-top: 0.25rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+  }
+
+  .hero-visual {
+    background: var(--blush);
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero-visual-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .visual-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .visual-card.tall { grid-row: span 2; }
+  .visual-card.pink { background: var(--rose); }
+  .visual-card.mint { background: var(--mint); }
+
+  .visual-icon {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .visual-card-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--dark);
+    letter-spacing: 0.3px;
+  }
+
+  .visual-card.pink .visual-card-label { color: white; }
+
+  .visual-card-sub {
+    font-size: 0.72rem;
+    color: var(--warm-gray);
+    font-weight: 400;
+  }
+
+  .visual-card.pink .visual-card-sub { color: rgba(255,255,255,0.75); }
+
+  .badge {
+    display: inline-block;
+    background: var(--blush);
+    color: var(--rose-deep);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+  }
+
+  .badge.new { background: var(--mint); color: #0D7A72; }
+  .badge.white { background: rgba(255,255,255,0.25); color: white; }
+
+  .floating-tag {
+    position: absolute;
+    top: 1.5rem;
+    right: -2rem;
+    background: var(--teal);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.35rem 2.5rem 0.35rem 0.75rem;
+    letter-spacing: 0.5px;
+    border-radius: 4px 0 0 4px;
+  }
+
+  /* CATEGORIES */
+  .section {
+    padding: 6rem 5%;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    color: var(--dark);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+
+  .section-sub {
+    color: var(--warm-gray);
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  /* CATEGORY CARDS */
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .cat-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid rgba(200,180,190,0.15);
+  }
+
+  .cat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(200,80,110,0.12);
+  }
+
+  .cat-img {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    position: relative;
+  }
+
+  .cat-img.bg-blush { background: var(--blush); }
+  .cat-img.bg-mint { background: var(--mint); }
+  .cat-img.bg-lavender { background: #EEE8FA; }
+  .cat-img.bg-peach { background: #FDE9DC; }
+  .cat-img.bg-sky { background: #DDF0FA; }
+
+  .cat-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+
+  .cat-name {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--dark);
+    margin-bottom: 0.4rem;
+  }
+
+  .cat-desc {
+    font-size: 0.83rem;
+    color: var(--warm-gray);
+    line-height: 1.5;
+  }
+
+  .cat-count {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--rose);
+  }
+
+  /* FEATURED PRODUCTS */
+  .products-bg { background: white; }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    background: var(--cream);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+
+  .product-card:hover { transform: translateY(-3px); }
+
+  .product-img {
+    height: 220px;
+    background: var(--blush);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    position: relative;
+  }
+
+  .product-img.bg2 { background: var(--mint); }
+  .product-img.bg3 { background: #EEE8FA; }
+  .product-img.bg4 { background: #FDE9DC; }
+
+  .product-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--rose);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.25rem 0.7rem;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+  }
+
+  .product-body {
+    padding: 1.25rem;
+  }
+
+  .product-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--dark);
+    margin-bottom: 0.3rem;
+  }
+
+  .product-sub {
+    font-size: 0.8rem;
+    color: var(--warm-gray);
+    margin-bottom: 0.75rem;
+  }
+
+  .product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--rose-deep);
+  }
+
+  .product-price .old {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: var(--warm-gray);
+    text-decoration: line-through;
+    font-weight: 400;
+    margin-left: 0.4rem;
+  }
+
+  .btn-add {
+    background: var(--rose);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 0.5rem 1.1rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .btn-add:hover { background: var(--rose-deep); }
+
+  /* WHY US */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .why-item {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--blush-mid);
+  }
+
+  .why-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--blush);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin: 0 auto 1.25rem;
+  }
+
+  .why-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .why-desc {
+    font-size: 0.83rem;
+    color: var(--warm-gray);
+    line-height: 1.6;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-bg { background: var(--dark); }
+
+  .testimonials-bg .section-eyebrow { color: var(--blush-mid); }
+  .testimonials-bg h2 { color: white; }
+  .testimonials-bg .section-sub { color: rgba(255,255,255,0.55); }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .testi-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 1.75rem;
+  }
+
+  .stars {
+    color: var(--rose);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .testi-text {
+    color: rgba(255,255,255,0.82);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .testi-author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .testi-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--rose);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .testi-name {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: white;
+  }
+
+  .testi-loc {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.45);
+    margin-top: 0.1rem;
+  }
+
+  /* NEWSLETTER */
+  .newsletter-wrap {
+    background: linear-gradient(135deg, var(--blush) 0%, #F7CCD9 50%, var(--mint) 100%);
+    border-radius: 24px;
+    padding: 4rem 3rem;
+    text-align: center;
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  .newsletter-wrap h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .newsletter-wrap .section-sub {
+    margin-bottom: 2rem;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    padding: 0.75rem 1.25rem;
+    border: 1.5px solid rgba(200,100,130,0.25);
+    border-radius: 100px;
+    font-size: 0.9rem;
+    background: white;
+    color: var(--dark);
+    font-family: 'Inter', sans-serif;
+    outline: none;
+  }
+
+  .newsletter-form input:focus {
+    border-color: var(--rose);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.55);
+    padding: 3.5rem 5%;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-top: 1rem;
+    max-width: 280px;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 600;
+  }
+
+  .footer-col h4 {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.3px;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .footer-col ul a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+  }
+
+  .footer-col ul a:hover { color: var(--rose); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .social-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .social-btn:hover {
+    background: var(--rose);
+    color: white;
+  }
+
+  /* BANNER */
+  .announcement {
+    background: var(--rose);
+    color: white;
+    text-align: center;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    letter-spacing: 0.3px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+      height: 55vw;
+      min-height: 280px;
+    }
+
+    .hero-text {
+      padding: 3rem 2rem;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .hero-text { padding: 2rem 1.25rem; }
+    .section { padding: 4rem 5%; }
+    .newsletter-form { flex-direction: column; }
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="announcement">🎉 Free delivery on orders above ₹499 &nbsp;·&nbsp; New arrivals every week!</div>
+
+<nav>
+  <a href="#" class="nav-logo">
+    New Baby
+    <span>& General Collection</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#categories">Shop</a></li>
+    <li><a href="#featured">New Arrivals</a></li>
+    <li><a href="#why">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#newsletter" class="nav-cta">Get Offers</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Trusted since 2018</div>
+    <h1>Everything your little one <em>needs</em>, all in one place</h1>
+    <p class="hero-desc">From soft newborn essentials to growing toddler favourites — quality products curated with love for every stage.</p>
+    <div class="hero-actions">
+      <a href="#categories" class="btn-primary">Shop Collection →</a>
+      <a href="#featured" class="btn-secondary">New Arrivals</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">2,000+</div>
+        <div class="stat-label">Happy families</div>
+      </div>
+      <div>
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Products</div>
+      </div>
+      <div>
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Safe & tested</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-visual-inner">
+      <div class="visual-card tall pink">
+        <span class="badge white">Bestseller</span>
+        <div class="visual-icon">🍼</div>
+        <div class="visual-card-label">Newborn Essentials</div>
+        <div class="visual-card-sub">Everything for the first days home</div>
+      </div>
+      <div class="visual-card">
+        <div class="visual-icon">🧸</div>
+        <div class="visual-card-label">Soft Toys</div>
+        <span class="badge new">New</span>
+      </div>
+      <div class="visual-card mint">
+        <div class="visual-icon">👶</div>
+        <div class="visual-card-label">Baby Clothing</div>
+        <div class="visual-card-sub">Sizes 0–24 months</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+  <div class="section-header">
+    <div class="section-eyebrow">Browse by category</div>
+    <h2>Everything you're looking for</h2>
+    <p class="section-sub">Carefully selected products across every category your family needs</p>
+  </div>
+  <div class="categories-grid">
+    <a href="#" class="cat-card">
+      <div class="cat-img bg-blush">🍼</div>
+      <div class="cat-body">
+        <div class="cat-name">Feeding & Nursing</div>
+        <div class="cat-desc">Bottles, breast pumps, bibs, sippy cups and feeding accessories.</div>
+        <div class="cat-count">78 products →</div>
+      </div>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-img bg-mint">🛏️</div>
+      <div class="cat-body">
+        <div class="cat-name">Baby Bedding</div>
+        <div class="cat-desc">Cots, mattresses, sleeping bags, muslin wraps and blankets.</div>
+        <div class="cat-count">54 products →</div>
+      </div>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-img bg-lavender">👗</div>
+      <div class="cat-body">
+        <div class="cat-name">Baby Clothing</div>
+        <div class="cat-desc">Soft onesies, rompers, frocks and sets for 0–36 months.</div>
+        <div class="cat-count">120 products →</div>
+      </div>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-img bg-peach">🧸</div>
+      <div class="cat-body">
+        <div class="cat-name">Toys & Learning</div>
+        <div class="cat-desc">Age-appropriate toys that spark curiosity and development.</div>
+        <div class="cat-count">90 products →</div>
+      </div>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-img bg-blush">🧴</div>
+      <div class="cat-body">
+        <div class="cat-name">Bath & Skincare</div>
+        <div class="cat-desc">Gentle, chemical-free bath products and baby skincare.</div>
+        <div class="cat-count">42 products →</div>
+      </div>
+    </a>
+    <a href="#" class="cat-card">
+      <div class="cat-img bg-sky">🏠</div>
+      <div class="cat-body">
+        <div class="cat-name">General Collection</div>
+        <div class="cat-desc">Household essentials, gifts and everyday family items.</div>
+        <div class="cat-count">65 products →</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="section products-bg" id="featured">
+  <div class="section-header">
+    <div class="section-eyebrow">Handpicked for you</div>
+    <h2>New arrivals this week</h2>
+    <p class="section-sub">Fresh stock, trusted brands — delivered to your door</p>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img">
+        <span class="product-tag">NEW</span>
+        🍼
+      </div>
+      <div class="product-body">
+        <div class="product-name">Anti-Colic Feeding Bottle Set</div>
+        <div class="product-sub">BPA-free · Set of 3 sizes</div>
+        <div class="product-footer">
+          <div class="product-price">₹399 <span class="old">₹549</span></div>
+          <button class="btn-add">+ Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img bg2">
+        <span class="product-tag">SALE</span>
+        👶
+      </div>
+      <div class="product-body">
+        <div class="product-name">Organic Cotton Onesie Pack</div>
+        <div class="product-sub">100% cotton · 3–6 months</div>
+        <div class="product-footer">
+          <div class="product-price">₹549 <span class="old">₹799</span></div>
+          <button class="btn-add">+ Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img bg3">
+        🧸
+      </div>
+      <div class="product-body">
+        <div class="product-name">Plush Elephant Rattle Toy</div>
+        <div class="product-sub">Safe for 0+ months</div>
+        <div class="product-footer">
+          <div class="product-price">₹299</div>
+          <button class="btn-add">+ Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img bg4">
+        <span class="product-tag">TOP</span>
+        🛁
+      </div>
+      <div class="product-body">
+        <div class="product-name">Foldable Baby Bath Tub</div>
+        <div class="product-sub">Non-slip · Easy storage</div>
+        <div class="product-footer">
+          <div class="product-price">₹849 <span class="old">₹1,099</span></div>
+          <button class="btn-add">+ Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section" id="why">
+  <div class="section-header">
+    <div class="section-eyebrow">Why families love us</div>
+    <h2>Shopping made simple & safe</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-icon">🚚</div>
+      <div class="why-title">Fast home delivery</div>
+      <div class="why-desc">Orders dispatched within 24 hours. Free delivery on orders above ₹499.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">✅</div>
+      <div class="why-title">Safety certified</div>
+      <div class="why-desc">Every product passes safety checks. Only trusted, tested brands on our shelves.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">🔄</div>
+      <div class="why-title">Easy returns</div>
+      <div class="why-desc">Not satisfied? Return within 7 days for a full refund, no questions asked.</div>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">💬</div>
+      <div class="why-title">Personal support</div>
+      <div class="why-desc">Talk to our team on WhatsApp any time. Real people, quick replies.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials-bg">
+  <div class="section-header">
+    <div class="section-eyebrow">What parents say</div>
+    <h2>Loved by families across Gujarat</h2>
+    <p class="section-sub">Real reviews from real customers</p>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <div class="testi-text">"The quality of the baby onesies is outstanding. So soft and perfect fit for my newborn. Will definitely order again!"</div>
+      <div class="testi-author">
+        <div class="testi-avatar">PR</div>
+        <div>
+          <div class="testi-name">Priya R.</div>
+          <div class="testi-loc">Ahmedabad</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <div class="testi-text">"Amazing collection and super fast delivery. Got my order the very next day. The feeding bottle set is exactly what I was looking for."</div>
+      <div class="testi-author">
+        <div class="testi-avatar">KS</div>
+        <div>
+          <div class="testi-name">Kavita S.</div>
+          <div class="testi-loc">Himatnagar</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <div class="testi-text">"Best baby shop in the area. The team is very helpful and they always have stock. I've been shopping here since my first child."</div>
+      <div class="testi-author">
+        <div class="testi-avatar">MJ</div>
+        <div>
+          <div class="testi-name">Meera J.</div>
+          <div class="testi-loc">Gandhinagar</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section" id="newsletter">
+  <div class="newsletter-wrap">
+    <div class="section-eyebrow">Stay in the loop</div>
+    <h2>Get exclusive offers & new arrival alerts</h2>
+    <p class="section-sub">Join 1,200+ parents already getting weekly deals</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Your WhatsApp / email" />
+      <button class="btn-primary">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">New Baby & General Collection</div>
+      <p>Your trusted neighbourhood store for everything babies and families need — quality products at honest prices, right here in Himatnagar.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">Feeding & Nursing</a></li>
+        <li><a href="#">Baby Clothing</a></li>
+        <li><a href="#">Bedding & Sleep</a></li>
+        <li><a href="#">Bath & Skincare</a></li>
+        <li><a href="#">Toys</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">Track your order</a></li>
+        <li><a href="#">Returns policy</a></li>
+        <li><a href="#">Delivery info</a></li>
+        <li><a href="#">Size guides</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact us</h4>
+      <ul>
+        <li><a href="tel:+919999999999">📞 +91 99999 99999</a></li>
+        <li><a href="#">💬 WhatsApp us</a></li>
+        <li><a href="#">📍 Himatnagar, Gujarat</a></li>
+        <li><a href="#">⏰ 9 AM – 8 PM daily</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 New Baby & General Collection. All rights reserved.</span>
+    <div class="footer-social">
+      <a href="#" class="social-btn" title="Facebook">f</a>
+      <a href="#" class="social-btn" title="Instagram">in</a>
+      <a href="#" class="social-btn" title="WhatsApp">W</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

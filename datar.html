@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datar Medical Store — Juna Bazar, Himatnagar | Home Delivery</title>
+  <meta name="description"
+    content="Datar Medical Store, Juna Bazar, Himatnagar. Allopathic, Surgical, Baby Care, Health Supplements & Cosmetics. Free Home Delivery. Call now: 8200229312">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --green-deep: #1B5E47;
+      --green-darker: #123F30;
+      --cream: #FBF8F1;
+      --sage: #DCE8DD;
+      --sage-line: #C3D6C5;
+      --coral: #E85D3D;
+      --coral-dark: #C8472A;
+      --ink: #1A2420;
+      --ink-soft: #4A5650;
+      --gold: #C9A050;
+      --white: #FFFFFF;
+
+      --font-display: 'Fraunces', serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--coral);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ============ PERFORATION DIVIDER (signature element) ============ */
+    .perforation {
+      position: relative;
+      height: 28px;
+      width: 100%;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    .perforation::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 0;
+      border-top: 2px dashed var(--sage-line);
+    }
+
+    .perforation .hole {
+      position: absolute;
+      top: 50%;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: 2px dashed var(--sage-line);
+      transform: translateY(-50%);
+    }
+
+    .perforation .hole.left {
+      left: -7px;
+    }
+
+    .perforation .hole.right {
+      right: -7px;
+    }
+
+    /* ============ TOP BAR ============ */
+    .topbar {
+      background: var(--green-darker);
+      color: var(--sage);
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      letter-spacing: 0.02em;
+    }
+
+    .topbar .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 28px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .topbar a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color .15s;
+    }
+
+    .topbar a:hover {
+      color: var(--gold);
+    }
+
+    .topbar .dot {
+      color: var(--gold);
+    }
+
+    /* ============ HEADER / NAV ============ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--cream);
+      border-bottom: 1px solid var(--sage-line);
+    }
+
+    nav.wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-text .name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--green-deep);
+      letter-spacing: -0.01em;
+    }
+
+    .brand-text .loc {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-soft);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .nav-links a {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--ink-soft);
+      position: relative;
+      padding: 4px 0;
+      transition: color .15s;
+    }
+
+    .nav-links a:hover {
+      color: var(--green-deep);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background: var(--coral);
+      transition: width .2s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      background: var(--coral);
+      color: var(--white) !important;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 11px 20px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background .15s, transform .15s;
+      box-shadow: 0 4px 14px rgba(232, 93, 61, 0.25);
+    }
+
+    .nav-cta:hover {
+      background: var(--coral-dark);
+      transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .menu-toggle span {
+      width: 24px;
+      height: 2.5px;
+      background: var(--green-deep);
+      border-radius: 2px;
+      transition: .2s;
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      position: relative;
+      background: var(--green-deep);
+      color: var(--cream);
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+      padding: 78px 28px 90px;
+    }
+
+    .hero-bg-pulse {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      opacity: 0.18;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .hero-eyebrow .pip {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulseDot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulseDot {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(0.8);
+      }
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 500;
+      color: var(--sage);
+    }
+
+    .hero p.lead {
+      font-size: 17.5px;
+      line-height: 1.65;
+      color: rgba(251, 248, 241, 0.82);
+      max-width: 480px;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 38px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 26px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: transform .15s, box-shadow .15s, background .15s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--coral);
+      color: var(--white);
+      box-shadow: 0 6px 20px rgba(232, 93, 61, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: var(--coral-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--cream);
+      border: 1.5px solid rgba(251, 248, 241, 0.4);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .hero-strip-stats {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .hero-strip-stats .stat {
+      border-left: 2px solid var(--gold);
+      padding-left: 14px;
+    }
+
+    .hero-strip-stats .stat .num {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--white);
+      display: block;
+    }
+
+    .hero-strip-stats .stat .label {
+      font-size: 12.5px;
+      color: rgba(251, 248, 241, 0.7);
+      margin-top: 2px;
+    }
+
+    /* Hero visual: medicine strip illustration */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .strip-card {
+      background: var(--cream);
+      border-radius: 18px;
+      padding: 26px 22px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+      transform: rotate(-3deg);
+      width: 100%;
+      max-width: 340px;
+    }
+
+    .strip-card .strip-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1.5px dashed var(--sage-line);
+    }
+
+    .strip-card .strip-header .brand-mini {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--green-deep);
+      font-size: 15px;
+    }
+
+    .strip-card .strip-header .rx {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--coral);
+      font-weight: 700;
+    }
+
+    .blister-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .blister {
+      aspect-ratio: 1;
+      background: linear-gradient(145deg, var(--sage), #c9ddcb);
+      border-radius: 50%;
+      position: relative;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .blister::after {
+      content: '';
+      position: absolute;
+      top: 22%;
+      left: 22%;
+      width: 38%;
+      height: 38%;
+      background: rgba(255, 255, 255, 0.55);
+      border-radius: 50%;
+    }
+
+    .strip-card .strip-note {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    .strip-card .strip-note b {
+      color: var(--green-deep);
+    }
+
+    .floating-badge {
+      position: absolute;
+      background: var(--coral);
+      color: var(--white);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 12.5px;
+      padding: 10px 16px;
+      border-radius: 30px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .floating-badge.b1 {
+      top: 0px;
+      right: 2%;
+      animation: float1 4s ease-in-out infinite;
+    }
+
+    .floating-badge.b2 {
+      bottom: -16px;
+      left: 0%;
+      background: var(--gold);
+      color: var(--ink);
+      animation: float2 5s ease-in-out infinite;
+    }
+
+    @keyframes float1 {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes float2 {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(8px);
+      }
+    }
+
+    /* ============ SECTION GENERIC ============ */
+    section {
+      padding: 84px 0;
+    }
+
+    .section-head {
+      max-width: 600px;
+      margin-bottom: 54px;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--coral);
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .section-head h2 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(28px, 3.4vw, 40px);
+      color: var(--green-deep);
+      line-height: 1.18;
+      letter-spacing: -0.01em;
+    }
+
+    .section-head p {
+      margin-top: 14px;
+      font-size: 16px;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    /* ============ WHY US STRIP ============ */
+    .why-strip {
+      background: var(--sage);
+      border-top: 1px solid var(--sage-line);
+      border-bottom: 1px solid var(--sage-line);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      padding: 46px 0;
+    }
+
+    .why-item {
+      padding: 0 24px;
+      border-right: 1px solid var(--sage-line);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .why-grid .why-item:last-child {
+      border-right: none;
+    }
+
+    .why-item .icon-wrap {
+      width: 42px;
+      height: 42px;
+      color: var(--green-deep);
+    }
+
+    .why-item h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 17px;
+      color: var(--green-darker);
+    }
+
+    .why-item p {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    /* ============ PRODUCTS ============ */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .product-card {
+      background: var(--white);
+      border: 1px solid var(--sage-line);
+      border-radius: 16px;
+      padding: 28px 20px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--coral);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(27, 94, 71, 0.12);
+      border-color: transparent;
+    }
+
+    .product-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .product-icon {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 18px;
+      color: var(--green-deep);
+    }
+
+    .product-card h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 17px;
+      color: var(--ink);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .product-card p {
+      font-size: 13px;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    /* ============ DELIVERY HOW-IT-WORKS ============ */
+    .delivery-section {
+      background: var(--green-deep);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .delivery-section .section-head h2 {
+      color: var(--cream);
+    }
+
+    .delivery-section .eyebrow {
+      color: var(--gold);
+    }
+
+    .delivery-section .section-head p {
+      color: rgba(251, 248, 241, 0.78);
+    }
+
+    .steps-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      position: relative;
+    }
+
+    .step {
+      background: rgba(251, 248, 241, 0.06);
+      border: 1px solid rgba(251, 248, 241, 0.15);
+      border-radius: 16px;
+      padding: 30px 26px;
+      position: relative;
+    }
+
+    .step .step-num {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .step h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      font-size: 14px;
+      color: rgba(251, 248, 241, 0.75);
+      line-height: 1.6;
+    }
+
+    .step-connector {
+      position: absolute;
+      top: 50%;
+      right: -22px;
+      width: 30px;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, var(--gold) 0 6px, transparent 6px 12px);
+      z-index: 2;
+    }
+
+    /* ============ CONTACT / LOCATION ============ */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--sage-line);
+      border-radius: 20px;
+      padding: 38px;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px dashed var(--sage-line);
+      align-items: flex-start;
+    }
+
+    .contact-row:last-child {
+      border-bottom: none;
+    }
+
+    .contact-row .ic {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+      color: var(--coral);
+      background: var(--sage);
+      border-radius: 10px;
+      padding: 8px;
+    }
+
+    .contact-row .ct h4 {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .contact-row .ct a,
+    .contact-row .ct span.val {
+      font-family: var(--font-mono);
+      font-size: 17px;
+      color: var(--green-deep);
+      font-weight: 700;
+    }
+
+    .contact-row .ct a:hover {
+      color: var(--coral);
+    }
+
+    .contact-row .ct .sub {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--ink-soft);
+      font-weight: 400;
+      margin-top: 3px;
+    }
+
+    .call-now-banner {
+      margin-top: 24px;
+      background: var(--coral);
+      border-radius: 16px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      box-shadow: 0 14px 30px rgba(232, 93, 61, 0.28);
+    }
+
+    .call-now-banner .txt {
+      color: var(--white);
+    }
+
+    .call-now-banner .txt h4 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .call-now-banner .txt p {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .call-now-banner a.call-btn {
+      background: var(--white);
+      color: var(--coral-dark);
+      font-weight: 700;
+      font-family: var(--font-mono);
+      font-size: 15px;
+      padding: 13px 22px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform .15s;
+      flex-shrink: 0;
+    }
+
+    .call-now-banner a.call-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .map-frame {
+      border: 1px solid var(--sage-line);
+      border-radius: 20px;
+      overflow: hidden;
+      height: 100%;
+      min-height: 420px;
+      background: var(--sage);
+      position: relative;
+    }
+
+    .map-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      min-height: 420px;
+      filter: saturate(0.9);
+    }
+
+    .map-label {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: var(--white);
+      padding: 10px 16px;
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--green-deep);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 5;
+    }
+
+    .map-label .pip {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--coral);
+    }
+
+    /* ============ TIMINGS TABLE ============ */
+    .timing-table {
+      width: 100%;
+      margin-top: 16px;
+      border-collapse: collapse;
+    }
+
+    .timing-table td {
+      padding: 10px 0;
+      font-size: 14.5px;
+      border-bottom: 1px solid var(--sage-line);
+    }
+
+    .timing-table td:first-child {
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+
+    .timing-table td:last-child {
+      text-align: right;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--green-deep);
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: var(--green-darker);
+      color: rgba(251, 248, 241, 0.7);
+      padding: 50px 0 26px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(251, 248, 241, 0.12);
+      margin-bottom: 24px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-brand .name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--cream);
+    }
+
+    .footer-brand .loc {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      transition: color .15s;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12.5px;
+      font-family: var(--font-mono);
+    }
+
+    /* ============ STICKY MOBILE CALL BAR ============ */
+    .sticky-call {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: var(--coral);
+      box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .sticky-call a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--white);
+      font-weight: 700;
+      font-family: var(--font-mono);
+      font-size: 15px;
+      padding: 16px;
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width:980px) {
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-item {
+        border-right: none;
+        border-bottom: 1px solid var(--sage-line);
+        padding-bottom: 24px;
+      }
+
+      .why-item:nth-child(2n) {
+        border-right: none;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding-top: 50px;
+      }
+
+      .hero-visual {
+        order: -1;
+        margin-bottom: 10px;
+      }
+
+      .strip-card {
+        max-width: 280px;
+        margin: 0 auto;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .step-connector {
+        display: none;
+      }
+    }
+
+    @media (max-width:760px) {
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 28px 28px;
+        border-bottom: 1px solid var(--sage-line);
+        gap: 18px;
+        display: none;
+        box-shadow: 0 18px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links .nav-cta {
+        margin-top: 6px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .topbar .wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-item {
+        border-bottom: 1px solid var(--sage-line);
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      .hero-inner {
+        padding: 36px 20px 64px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-strip-stats {
+        gap: 20px;
+      }
+
+      .sticky-call {
+        display: block;
+      }
+
+      body {
+        padding-bottom: 64px;
+      }
+
+      .call-now-banner {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+
+      .call-now-banner a.call-btn {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width:480px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .brand-text .name {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="topbar">
+    <div class="wrap">
+      <a href="tel:8200229312" aria-label="Call Datar Medical Store">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        +91 82002 29312
+      </a>
+      <span class="dot">●</span>
+      <span>Mon–Sun: 9:00 AM – 10:00 PM</span>
+      <span class="dot">●</span>
+      <span>Juna Bazar, Himatnagar, Gujarat</span>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <nav class="wrap">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none">
+          <rect x="2" y="2" width="44" height="44" rx="12" fill="#1B5E47" />
+          <rect x="20" y="11" width="8" height="26" rx="3" fill="#FBF8F1" />
+          <rect x="11" y="20" width="26" height="8" rx="3" fill="#FBF8F1" />
+          <circle cx="24" cy="24" r="21" stroke="#C9A050" stroke-width="1.4" stroke-dasharray="2 4" />
+        </svg>
+        <div class="brand-text">
+          <span class="name">Datar Medical Store</span>
+          <span class="loc">Juna Bazar · Himatnagar</span>
+        </div>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#products">Products</a>
+        <a href="#delivery">Home Delivery</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#contact">Contact &amp; Location</a>
+        <a href="tel:8200229312" class="nav-cta">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          Call Now
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <svg class="hero-bg-pulse" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <polyline points="0,60 150,60 175,20 200,100 225,60 350,60 375,30 400,90 425,60 1200,60" fill="none"
+        stroke="#FBF8F1" stroke-width="2" />
+    </svg>
+    <div class="hero-inner wrap">
+      <div class="hero-copy">
+        <span class="hero-eyebrow"><span class="pip"></span> Juna Bazar's Trusted Pharmacy</span>
+        <h1>Aapki dawai,<br><em>aapke ghar tak.</em></h1>
+        <p class="lead">Datar Medical Store — Himatnagar ke Juna Bazar mein, har zaroori dawai aur medical product ek hi
+          jagah. Order karo, ghar baithe paao.</p>
+        <div class="hero-actions">
+          <a href="tel:8200229312" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            Order karne ke liye Call karein
+          </a>
+          <a href="#delivery" class="btn btn-secondary">Home Delivery jaane</a>
+        </div>
+        <div class="hero-strip-stats">
+          <div class="stat"><span class="num">13+ Hrs</span><span class="label">Daily Open (9AM–10PM)</span></div>
+          <div class="stat"><span class="num">100%</span><span class="label">Genuine Products</span></div>
+          <div class="stat"><span class="num">Free</span><span class="label">Home Delivery</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="floating-badge b1">🚚 Free Delivery</div>
+        <div class="strip-card">
+          <div class="strip-header">
+            <span class="brand-mini">Datar Medical</span>
+            <span class="rx">℞ JUNA BAZAR</span>
+          </div>
+          <div class="blister-row">
+            <div class="blister"></div>
+            <div class="blister"></div>
+            <div class="blister"></div>
+            <div class="blister"></div>
+            <div class="blister"></div>
+          </div>
+          <div class="blister-row">
+            <div class="blister"></div>
+            <div class="blister"></div>
+            <div class="blister"></div>
+            <div class="blister"></div>
+            <div class="blister"></div>
+          </div>
+          <p class="strip-note"><b>Store Hrs:</b> 9:00 AM – 10:00 PM, Daily<br><b>Phone:</b> 82002 29312</p>
+        </div>
+        <div class="floating-badge b2">⭐ Trusted by locals</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="perforation">
+    <div class="hole left"></div>
+    <div class="hole right"></div>
+  </div>
+
+  <!-- ============ WHY US ============ -->
+  <section id="why-us" class="why-strip">
+    <div class="wrap">
+      <div class="why-grid">
+        <div class="why-item">
+          <svg class="icon-wrap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <path d="M3 11l18-5v12L3 14v-3z" />
+            <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+          </svg>
+          <h3>Genuine Medicines</h3>
+          <p>Sirf licensed suppliers se sourced — har dawai original aur quality-checked.</p>
+        </div>
+        <div class="why-item">
+          <svg class="icon-wrap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <rect x="1" y="3" width="15" height="13" />
+            <path d="M16 8h4l3 3v5h-7V8z" />
+            <circle cx="5.5" cy="18.5" r="2.5" />
+            <circle cx="18.5" cy="18.5" r="2.5" />
+          </svg>
+          <h3>Fast Home Delivery</h3>
+          <p>Call karo, aur dawai aapke ghar tak — Himatnagar ke andar fast delivery.</p>
+        </div>
+        <div class="why-item">
+          <svg class="icon-wrap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" />
+            <path d="M9 12l2 2 4-4" />
+          </svg>
+          <h3>Trusted Since Years</h3>
+          <p>Juna Bazar ke local families ka bharosa — generations se seva mein.</p>
+        </div>
+        <div class="why-item">
+          <svg class="icon-wrap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+          <h3>Open 13 Hours Daily</h3>
+          <p>9:00 AM se raat 10:00 PM tak — har din, bina chutti ke khula.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section id="products">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Hamare Products</span>
+        <h2>Har zaroorat ki dawai, ek hi chhat ke neeche</h2>
+        <p>Allopathic dawaiyon se lekar baby care tak — Datar Medical Store mein aapke pure parivaar ki health
+          zarooriyat poori hoti hai.</p>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M10.5 20.5a4.95 4.95 0 0 1-7-7l7-7 7 7a4.95 4.95 0 0 1-7 7z" />
+            <path d="M8.5 8.5l7 7" />
+          </svg>
+          <h3>Allopathic Medicines</h3>
+          <p>Saari prescription &amp; OTC dawaiyan — fever, cold, BP, sugar aur general illness ke liye.</p>
+        </div>
+        <div class="product-card">
+          <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M19 8h-1V3H6v5H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2z" />
+            <path d="M9 12h6M12 9v6" />
+          </svg>
+          <h3>Surgical Items</h3>
+          <p>Bandages, syringes, gloves, cotton, aur dusre surgical equipment — sab kuch ready stock mein.</p>
+        </div>
+        <div class="product-card">
+          <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 21c-4-2.5-7-5.5-7-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 3.5-3 6.5-7 9z" />
+            <circle cx="12" cy="8" r="1.5" />
+          </svg>
+          <h3>Baby Care Products</h3>
+          <p>Diapers, baby food, lotions aur newborn essentials — naye parents ke liye trusted brands.</p>
+        </div>
+        <div class="product-card">
+          <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 2v6M12 2c-3 2-3 5-3 5M12 2c3 2 3 5 3 5" />
+            <rect x="5" y="9" width="14" height="13" rx="2" />
+          </svg>
+          <h3>Health Supplements &amp; Vitamins</h3>
+          <p>Protein, multivitamins, immunity boosters — daily health aur fitness ke liye.</p>
+        </div>
+        <div class="product-card">
+          <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M8 12a4 4 0 0 1 4-4M16 12a4 4 0 0 1-4 4" />
+          </svg>
+          <h3>Cosmetics &amp; Personal Care</h3>
+          <p>Skin care, hygiene products aur daily personal care items — trusted brands ke saath.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="perforation">
+    <div class="hole left"></div>
+    <div class="hole right"></div>
+  </div>
+
+  <!-- ============ DELIVERY ============ -->
+  <section id="delivery" class="delivery-section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Home Delivery</span>
+        <h2>Sirf ek call mein, dawai aapke darwaze tak</h2>
+        <p>Himatnagar mein kahin bhi ho — order karo aur ghar baithe receive karo. Process bilkul simple hai.</p>
+      </div>
+
+      <div class="steps-row">
+        <div class="step">
+          <span class="step-num">STEP 01</span>
+          <h3>Call karein</h3>
+          <p>8200229312 par call karke apni dawai ya product ki list bataiye.</p>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step">
+          <span class="step-num">STEP 02</span>
+          <h3>Hum tayyar karte hain</h3>
+          <p>Aapka order check karke, sahi dawai pack ki jaati hai.</p>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step">
+          <span class="step-num">STEP 03</span>
+          <h3>Ghar tak delivery</h3>
+          <p>Himatnagar ke andar order seedha aapke ghar pahunchaya jaata hai.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="perforation">
+    <div class="hole left"></div>
+    <div class="hole right"></div>
+  </div>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Contact &amp; Location</span>
+        <h2>Hume call karein ya store visit karein</h2>
+        <p>Juna Bazar, Himatnagar mein humari dukaan — koi bhi sawaal ho, seedha baat karein.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <div class="contact-card">
+            <div class="contact-row">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <div class="ct">
+                <h4>Phone / Order Karne Ke Liye</h4>
+                <a href="tel:8200229312">+91 82002 29312</a>
+                <span class="sub">Owner – Datar Medical Store</span>
+              </div>
+            </div>
+            <div class="contact-row">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <div class="ct">
+                <span class="val">Juna Bazar, Himatnagar</span>
+                <span class="sub">Sabarkantha, Gujarat</span>
+              </div>
+            </div>
+            <div class="contact-row">
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+              <div class="ct">
+                <table class="timing-table">
+                  <tr>
+                    <td>Monday – Sunday</td>
+                    <td>9:00 AM – 10:00 PM</td>
+                  </tr>
+                </table>
+                <span class="sub" style="margin-top:8px;display:block;">Saatho din khula — koi weekly off nahi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="call-now-banner">
+            <div class="txt">
+              <h4>Abhi order karna hai?</h4>
+              <p>Seedha call karein, hum aapke ghar tak dawai pahunchayenge.</p>
+            </div>
+            <a href="tel:8200229312" class="call-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              82002 29312
+            </a>
+          </div>
+        </div>
+
+        <div class="map-frame">
+          <span class="map-label"><span class="pip"></span> Juna Bazar, Himatnagar</span>
+          <iframe src="https://www.google.com/maps?q=Juna+Bazar,+Himatnagar,+Gujarat&output=embed" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Datar Medical Store Location Map">
+          </iframe>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:20px;">
+        <a href="https://www.google.com/maps/search/?api=1&query=Juna+Bazar+Himatnagar+Gujarat" target="_blank"
+          rel="noopener"
+          style="font-family:var(--font-mono); font-size:13px; color:var(--green-deep); font-weight:700; display:inline-flex; align-items:center; gap:6px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          Google Maps mein khol kar Directions paayein
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg width="38" height="38" viewBox="0 0 48 48" fill="none">
+            <rect x="2" y="2" width="44" height="44" rx="12" fill="#FBF8F1" fill-opacity="0.08" />
+            <rect x="20" y="11" width="8" height="26" rx="3" fill="#FBF8F1" />
+            <rect x="11" y="20" width="26" height="8" rx="3" fill="#FBF8F1" />
+          </svg>
+          <div>
+            <div class="name">Datar Medical Store</div>
+            <div class="loc">JUNA BAZAR, HIMATNAGAR</div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#products">Products</a>
+          <a href="#delivery">Home Delivery</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#contact">Contact</a>
+          <a href="tel:8200229312">Call: 8200229312</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Datar Medical Store, Himatnagar.</span>
+        <span>Open Daily · 9:00 AM – 10:00 PM</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ STICKY MOBILE CALL ============ -->
+  <div class="sticky-call">
+    <a href="tel:8200229312">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg>
+      Order Karne Ke Liye Call Karein — 82002 29312
+    </a>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
